@@ -1,3 +1,4 @@
+import { InquiryComponent } from './inquiry/inquiry.component';
 import { StaffsComponent } from './staffs/staffs.component';
 import { LoginComponent } from './login/login.component';
 
@@ -8,7 +9,9 @@ import { LocationComponent } from './location/location.component';
 const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'staffs', component:StaffsComponent},
-  {path:'location', component:LocationComponent}
+  {path:'location', component:LocationComponent},
+  {path:'inquiry', component:InquiryComponent}
+  
 ];
 
 @NgModule({

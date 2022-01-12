@@ -1,1 +1,25 @@
-<p>inquiry works!</p>
+<div fxLayoutAlign="center center" fxFlexFill class="inquiry-div">
+    <mat-card fxFlex="75">
+      <mat-toolbar fxLayoutAlign="left center" colour="primary">Kindly fill in the form with your concerns....</mat-toolbar>
+        <form fxLayoutAlign="center center" fxLayout = "column" >
+            <div class="inquiry-in1-div">
+            <mat-form-field >
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" >
+              
+            </mat-form-field>
+        </div>
+        <div class="inquiry-in2-div">
+            <mat-form-field style="width: 900px;">
+                <mat-label>Inquiry Note</mat-label>
+                <textarea matInput type="inquiry note" placeholder="Ex. I want to know about..." >
+                </textarea>
+              </mat-form-field>
+            </div>
+              <button mat-raised-button style = "position:absolute; right:120px; bottom:50px" color="primary"  type="submit">Submit </button>
+           
+          </form>
+           
+    </mat-card>
+    
+</div>
