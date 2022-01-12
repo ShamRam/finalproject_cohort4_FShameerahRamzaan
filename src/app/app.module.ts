@@ -35,9 +35,6 @@ import { InquiryComponent } from './inquiry/inquiry.component';
 
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
