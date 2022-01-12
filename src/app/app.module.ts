@@ -28,6 +28,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { LocationComponent } from './location/location.component';
+import { InquiryComponent } from './inquiry/inquiry.component';
+
+
 
 
 
@@ -43,7 +47,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     NavComponent,
     SmiconComponent,
     StaffsComponent,
-    StaffComponent
+    StaffComponent,
+    LocationComponent,
+    InquiryComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatCheckboxModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    
   ],
  
   providers: [StaffService],
