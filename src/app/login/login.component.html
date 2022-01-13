@@ -1,7 +1,7 @@
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
     <mat-card fxFlex="25">
       <mat-toolbar fxLayoutAlign="center center" colour="primary">Login to Shra System</mat-toolbar>
-        <form fxLayoutAlign="center center" fxLayout = "column" >
+        <form [formGroup]="service.form" fxLayoutAlign="center center" fxLayout = "column" >
             <mat-form-field >
               <mat-label>Email</mat-label>
               <input matInput placeholder="Email" >

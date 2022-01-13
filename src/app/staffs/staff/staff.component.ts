@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffComponent implements OnInit {
 
-  constructor(public service: StaffService) { }
+  constructor(private service: StaffService) { }
 
   roles = [
     {id:3, value: 'Manager'},

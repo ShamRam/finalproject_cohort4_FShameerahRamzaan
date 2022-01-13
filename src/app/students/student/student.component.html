@@ -1,5 +1,5 @@
 <mat-card fxFlex="100">
-    <mat-toolbar fxLayoutAlign="left center" colour="primary">Enter Staff Details</mat-toolbar>
+    <mat-toolbar fxLayoutAlign="left center" colour="primary">Enter Student Details</mat-toolbar>
 <form [formGroup]="service.form" class="normal-form" >
     <mat-grid-list cols="2" rowHeight="500px">
         <mat-grid-tile>
@@ -37,18 +37,11 @@
         </mat-grid-tile>
 
         <mat-grid-tile>
-            <div class="controlers-container">
-                <mat-form-field>
-                    <mat-select fromControlName="role" placeholder="Role">
-                        <mat-option>None</mat-option>
-                        <ng-container *ngFor="let role of roles">
-                            <mat-option value="{{role.id}}">{{role.value}}</mat-option>
-                        </ng-container>
-                    </mat-select>
-                </mat-form-field>            
-                <div class="add-button-padding">
-       <mat-checkbox fromControlName="ispermanentstaff"> Permanent Staff</mat-checkbox>       
-    <br>
+            <div class="add-button-padding">
+                <mat-radio-group fromControlName="gender">
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+            <br>
 <div class="button-row">
     <button mat-raised-button color="primary" type="add" [disabled]="service.form.invalid" > Add </button>
     <button mat-raised-button color="basic" (click)="onClear"> Cancel </button>

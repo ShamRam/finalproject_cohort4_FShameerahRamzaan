@@ -1,0 +1,35 @@
+<mat-card fxFlex="100">
+    <mat-toolbar fxLayoutAlign="left center" colour="primary">Enter Staff's Salary Details</mat-toolbar>
+<form [formGroup]="service.form" class="normal-form" >
+    <mat-grid-list cols="2" rowHeight="500px">
+        <mat-grid-tile>
+            <div class="controlers-container">
+                <mat-form-field>
+                    <input fromControlName="id" matInput placeholder="ID"> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input fromControlName="department" matInput placeholder="Department*"> 
+                    <mat-error> This field is mandatory! </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input fromControlName="basicsalary" matInput placeholder="Basic Salary"> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input fromControlName="allowance" matInput placeholder="Allowance"> 
+                </mat-form-field>
+                
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          
+<div class="button-row">
+    <button mat-raised-button color="primary" type="add" [disabled]="service.form.invalid" > Add </button>
+    <button mat-raised-button color="basic" (click)="onClear"> Cancel </button>
+    <button mat-raised-button color="primary" type="update"> Update </button>
+    <button mat-raised-button color="warn" type="delete"> Delete </button>
+</div>
+</mat-grid-tile>
+</form>
+</mat-card>
+

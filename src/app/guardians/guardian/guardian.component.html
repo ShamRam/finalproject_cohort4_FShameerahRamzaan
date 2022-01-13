@@ -1,5 +1,5 @@
 <mat-card fxFlex="100">
-    <mat-toolbar fxLayoutAlign="left center" colour="primary">Enter Staff Details</mat-toolbar>
+    <mat-toolbar fxLayoutAlign="left center" colour="primary">Enter Guardian Details</mat-toolbar>
 <form [formGroup]="service.form" class="normal-form" >
     <mat-grid-list cols="2" rowHeight="500px">
         <mat-grid-tile>
@@ -15,9 +15,8 @@
                     <input fromControlName="lastname" matInput placeholder="Last Name"> 
                 </mat-form-field>
                 <mat-form-field>
-                    <input fromControlName="dob" matInput [matDatePicker]="picker" placeholder="Date of Birth">
-                    <mat-datepicker-toggle matSuffix[for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>   
+                    <input fromControlName="dob" matInput  placeholder="Date of Birth">
+                    
                 </mat-form-field>
                 <mat-form-field>
                     <input fromControlName="emailid" matInput placeholder="Email ID*"> 
@@ -37,18 +36,7 @@
         </mat-grid-tile>
 
         <mat-grid-tile>
-            <div class="controlers-container">
-                <mat-form-field>
-                    <mat-select fromControlName="role" placeholder="Role">
-                        <mat-option>None</mat-option>
-                        <ng-container *ngFor="let role of roles">
-                            <mat-option value="{{role.id}}">{{role.value}}</mat-option>
-                        </ng-container>
-                    </mat-select>
-                </mat-form-field>            
-                <div class="add-button-padding">
-       <mat-checkbox fromControlName="ispermanentstaff"> Permanent Staff</mat-checkbox>       
-    <br>
+           
 <div class="button-row">
     <button mat-raised-button color="primary" type="add" [disabled]="service.form.invalid" > Add </button>
     <button mat-raised-button color="basic" (click)="onClear"> Cancel </button>

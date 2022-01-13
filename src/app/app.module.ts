@@ -1,3 +1,13 @@
+import { TeacherService } from './shared/teacher.service';
+import { SubjectService } from './shared/subject.service';
+import { StudentService } from './shared/student.service';
+import { SchoolclassService } from './shared/schoolclass.service';
+import { SalaryService } from './shared/salary.service';
+import { NoticeService } from './shared/notice.service';
+import { GuardianService } from './shared/guardian.service';
+import { FeeService } from './shared/fee.service';
+import { EmarkService } from './shared/emark.service';
+import { AppuserService } from './shared/appuser.service';
 import { StaffService } from './shared/staff.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,6 +40,28 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { LocationComponent } from './location/location.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
+import { StaffListComponent } from './staffs/staff-list/staff-list.component';
+import { TeachersComponent } from './teachers/teachers.component';
+import { TeacherComponent } from './teachers/teacher/teacher.component';
+import { StudentsComponent } from './students/students.component';
+import { StudentComponent } from './students/student/student.component';
+import { GuardiansComponent } from './guardians/guardians.component';
+import { GuardianComponent } from './guardians/guardian/guardian.component';
+import { EmarksComponent } from './emarks/emarks.component';
+import { EmarkComponent } from './emarks/emark/emark.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { SubjectComponent } from './subjects/subject/subject.component';
+import { AppusersComponent } from './appusers/appusers.component';
+import { AppuserComponent } from './appusers/appuser/appuser.component';
+import { FeesComponent } from './fees/fees.component';
+import { FeeComponent } from './fees/fee/fee.component';
+import { SchoolclassesComponent } from './schoolclasses/schoolclasses.component';
+import { SchoolclassComponent } from './schoolclasses/schoolclass/schoolclass.component';
+import { SalariesComponent } from './salaries/salaries.component';
+import { SalaryComponent } from './salaries/salary/salary.component';
+import { NoticesComponent } from './notices/notices.component';
+import { NoticeComponent } from './notices/notice/notice.component';
+
 
 
 
@@ -46,7 +78,28 @@ import { InquiryComponent } from './inquiry/inquiry.component';
     StaffsComponent,
     StaffComponent,
     LocationComponent,
-    InquiryComponent
+    InquiryComponent,
+    StaffListComponent,
+    TeachersComponent,
+    TeacherComponent,
+    StudentsComponent,
+    StudentComponent,
+    GuardiansComponent,
+    GuardianComponent,
+    EmarksComponent,
+    EmarkComponent,
+    SubjectsComponent,
+    SubjectComponent,
+    AppusersComponent,
+    AppuserComponent,
+    FeesComponent,
+    FeeComponent,
+    SchoolclassesComponent,
+    SchoolclassComponent,
+    SalariesComponent,
+    SalaryComponent,
+    NoticesComponent,
+    NoticeComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +124,7 @@ import { InquiryComponent } from './inquiry/inquiry.component';
     
   ],
  
-  providers: [StaffService],
+  providers: [StaffService, AppuserService, EmarkService, FeeService, GuardianService, NoticeService, SalaryService, SchoolclassService,StudentService, SubjectService, TeacherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

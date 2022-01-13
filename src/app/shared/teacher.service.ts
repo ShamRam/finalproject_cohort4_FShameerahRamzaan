@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms'; 
 
 @Injectable({
   providedIn: 'root'
 })
-export class StaffService {
+export class TeacherService {
 
   constructor() { }
-  
 
   form: FormGroup = new FormGroup({
     id: new FormControl(null),
@@ -19,10 +18,8 @@ export class StaffService {
     address: new FormControl(''),
     nicnumber: new FormControl(''),
     role: new FormControl(0),
-    ispermanentstaff: new FormControl(false)
   });
 
-  
   initializeFormGroup(){
     this.form.setValue({
       id: null,
@@ -34,7 +31,7 @@ export class StaffService {
       address: '',
       nicnumber: '',
       role: 0,
-      ispermanentstaff: false
+      
     })
   }
 }

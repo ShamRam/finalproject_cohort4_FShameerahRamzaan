@@ -1,0 +1,33 @@
+div.container{
+    margin: 0px 40px;
+
+}
+
+.fill-remainig-space{
+    flex: 1 1 auto;
+}
+
+.normal-form{
+    margin: 10px;
+    
+}
+
+.controlers-container{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+.controlers-container > * {
+    width: 100%;
+    
+}
+
+.add-bottom-padding{
+    padding-bottom: 10px;
+}
+
+.button-row button{
+    margin: 15px;
+
+}
