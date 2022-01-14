@@ -31,7 +31,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { SmiconComponent } from './smicon/smicon.component';
 import { StaffsComponent } from './staffs/staffs.component';
 import { StaffComponent } from './staffs/staff/staff.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -61,6 +61,10 @@ import { SalariesComponent } from './salaries/salaries.component';
 import { SalaryComponent } from './salaries/salary/salary.component';
 import { NoticesComponent } from './notices/notices.component';
 import { NoticeComponent } from './notices/notice/notice.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -121,10 +125,17 @@ import { NoticeComponent } from './notices/notice/notice.component';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    FormsModule,
+    MatDialogModule
+    
     
   ],
  
   providers: [StaffService, AppuserService, EmarkService, FeeService, GuardianService, NoticeService, SalaryService, SchoolclassService,StudentService, SubjectService, TeacherService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [StaffComponent]
 })
 export class AppModule { }

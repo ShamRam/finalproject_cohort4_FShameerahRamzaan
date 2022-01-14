@@ -1,6 +1,7 @@
 import { StaffService } from './../../shared/staff.service';
 import { Component, OnInit } from '@angular/core';
-
+import { MatDialogRef } from '@angular/material/dialog';
+import { isRegularExpressionLiteral } from 'typescript';
 
 @Component({
   selector: 'app-staff',
@@ -9,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffComponent implements OnInit {
 
-  constructor(private service: StaffService) { }
+  constructor(private service: StaffService,
+    private dialogRef: MatDialogRef<StaffComponent>) { }
 
   roles = [
     {id:3, value: 'Manager'},
@@ -25,4 +27,20 @@ export class StaffComponent implements OnInit {
     this.service.initializeFormGroup();
   }
 
+  onSubmit(){
+    if(this.service.form.valid){
+      if(!this.service.form.get('id').value)
+      this.service.insertStaff(this.service.form.value);
+      else 
+      this.service.updateStaff(this.service.form.value);
+      this.service.form.reset();
+      this.service.initializeFormGroup();
+      this.onClose();
+    }
+  }
+  onClose(){
+    this.service.form.reset();
+    this.service.initializeFormGroup();
+    this.dialogRef.close();
+  }
 }

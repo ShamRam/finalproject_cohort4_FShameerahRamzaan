@@ -31,3 +31,9 @@ div.container{
     margin: 15px;
 
 }
+.btn-dialog-close{
+    width: 45px;
+    min-width: 0px !important;
+    height: 40px;
+    padding: 0px !important;
+}

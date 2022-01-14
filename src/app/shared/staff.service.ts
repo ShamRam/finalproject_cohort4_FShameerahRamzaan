@@ -22,6 +22,10 @@ export class StaffService {
     ispermanentstaff: new FormControl(false)
   });
 
+  getStaffs(){
+    this.staffList = this.mysql.list('staffs');
+    return this.staffList.snapshotChnages();
+  }
   
   initializeFormGroup(){
     this.form.setValue({
@@ -36,5 +40,43 @@ export class StaffService {
       role: 0,
       ispermanentstaff: false
     })
+  }
+  
+ insertStaff(staff){
+   this.staffList.push({
+     id: staff.id,
+     firstname: staff.firstname,
+     lastname: staff.lastname,
+     dob: staff.dob,
+     emailid: staff.emailid,
+     phonenumber: staff.phonenumber,
+     address: staff.address,
+     nicnumber: staff.nicnumber,
+     role: staff.role,
+     ispermanentstaff: staff.ispermanentstaff
+   });
+ }
+  
+ updateStaff(staff){
+   this.staffList.update(staff.id,
+    {
+      id: staff.id,
+     firstname: staff.firstname,
+     lastname: staff.lastname,
+     dob: staff.dob,
+     emailid: staff.emailid,
+     phonenumber: staff.phonenumber,
+     address: staff.address,
+     nicnumber: staff.nicnumber,
+     role: staff.role,
+     ispermanentstaff: staff.ispermanentstaff
+    });
+ } 
+
+ deleteStaff(id: string){
+   this.staffList.remove(id);
+ }
+  populateForm(staff){
+    this.form.setValue(staff);
   }
 }
